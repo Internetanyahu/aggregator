@@ -2,23 +2,22 @@
 
 ## First-run sequence
 
-1. Open the deployed GitHub Pages site after Pages deployment finishes.
-2. Read and complete the legal checklist before contacting sellers or investors. Obtain written advice from an Illinois real-estate attorney and any required sponsoring broker.
-3. Add a seller lead only when the source and contact method are lawful and permission-based. Record seller-stated facts separately from estimates.
-4. Add buyers with their target geography, property type, price range, strategy, and funding-verification status. Do not treat self-attestation as proof of funds.
-5. Underwrite with recent comparable closed sales, property inspection, and documented repair estimates. The calculator is arithmetic only.
-6. Create a deal record and update its stage as the transaction progresses.
-7. Generate a document discussion draft only for attorney review. The app does not create a binding or state-approved contract.
-8. Export a JSON backup regularly. Browser storage is local to the current browser profile and may be lost when site data is cleared or the device is replaced.
+1. Open the GitHub Pages site after the Pages deployment workflow succeeds.
+2. Complete the legal checklist before any seller or investor solicitation. Obtain written guidance from an Illinois real-estate attorney and any required sponsoring broker.
+3. Add seller leads only where the source and contact method are lawful and permission-based. Distinguish seller-stated facts from estimates.
+4. Add investors with their target geography, property type, price range, strategy, and funding-verification status. Self-attestation is not proof of funds.
+5. Underwrite using recent comparable closed sales, inspections, and documented repair estimates. The calculator performs arithmetic only.
+6. Track deal stages and export a JSON backup regularly.
+7. Generate a document discussion draft only for attorney review. It is not a binding or state-approved contract.
 
-## Important limitations
+## Limits
 
-- No server, authentication, encrypted storage, shared CRM, or cloud backup.
-- No automated lead discovery, seller outreach, cold calling, texting, email campaigns, or scraping of restricted sources.
-- No property-value verification, title search, lien search, identity verification, proof-of-funds verification, or contract execution.
-- No automatic assignment recommendation. Illinois law and transaction-specific facts must be reviewed by counsel.
+- No server, login, encrypted storage, shared CRM, or cloud backup.
+- No automatic lead discovery, cold calls, unsolicited texts, email campaigns, or restricted-site scraping.
+- No valuation, title, lien, identity, proof-of-funds, or contract verification.
+- No automatic assignment recommendation or execution.
 - Do not store sensitive identifiers, bank details, credentials, or identity documents.
 
-## Alternative-data signals
+## Alternative-data workflow
 
-The SEC, EPA CAMPD, and Illinois WARN feeds are a separate research pipeline. They may provide macroeconomic or company-level context but are not homeowner lead lists. A layoff, filing, or emissions event does not prove that a particular property is available, distressed, or owned by a particular person.
+The separate Python pipeline is run manually from GitHub Actions. Configure repository secrets SEC_USER_AGENT (descriptive app name plus monitored contact email) and EPA_API_KEY (free api.data.gov key). Then run the workflow named Run official-source research pipeline from the Actions tab. The SQLite database is uploaded as a short-lived workflow artifact, not committed to the public repository. SEC, EPA CAMPD, and Illinois WARN are contextual sources, not residential seller leads.
