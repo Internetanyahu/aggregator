@@ -1,0 +1,42 @@
+name: Run official-source research pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Source to ingest
+        required: true
+        type: choice
+        options: [all, sec, campd, warn]
+        default: warn
+      campd_days:
+        description: CAMPD date window (1–31 days)
+        required: false
+        default: "1"
+      warn_months:
+        description: Number of latest Illinois WARN XLSX reports
+        required: false
+        default: "2"
+permissions:
+  contents: read
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run ingestion
+        env:
+          SEC_USER_AGENT: \${{ secrets.SEC_USER_AGENT }}
+          EPA_API_KEY: \${{ secrets.EPA_API_KEY }}
+        run: |
+          python -m aggregator.run --source "\${{ inputs.source }}" --campd-days "\${{ inputs.campd_days }}" --warn-months "\${{ inputs.warn_months }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: northstar-research-database
+          path: data/aggregator.sqlite3
+          if-no-files-found: ignore
+          retention-days: 7
