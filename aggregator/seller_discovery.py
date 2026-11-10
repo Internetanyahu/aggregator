@@ -65,7 +65,7 @@ def run(output="public/data/seller_leads.json"):
                     continue
                 items.append({
                     "id": key, "label": label, "title": title,
-                    "url": publisher_url or link, "feed_url": link,
+                    "url": link, "publisher_url": publisher_url,
                     "publisher": publisher or host, "publisher_url": publisher_url,
                     "published_at": published,
                     "retrieved_at": datetime.now(timezone.utc).isoformat(),
