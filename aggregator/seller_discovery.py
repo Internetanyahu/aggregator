@@ -5,7 +5,8 @@ publisher URL and publication timestamp. No owner contact details are harvested.
 """
 from __future__ import annotations
 import json, re, hashlib
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import quote_plus, urlparse
 import xml.etree.ElementTree as ET
@@ -18,6 +19,8 @@ QUERIES = [
     ("Northern Illinois price reductions", '(Illinois OR "Lake County" OR "McHenry County" OR "Kane County") home "price reduced" OR "price reduction"'),
 ]
 RSS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+MAX_AGE_DAYS = 365
+INTENT_TERMS = ("for sale by owner", "fsbo", "auction", "foreclosure", "sheriff sale", "tax sale", "tax deed", "price reduced", "price reduction")
 HEADERS = {"User-Agent": "NorthstarPropertyResearch/1.0 (public RSS discovery)"}
 
 def clean(value):
@@ -37,7 +40,18 @@ def run(output="public/data/seller_leads.json"):
                 link = clean(node.findtext("link"))
                 description = clean(node.findtext("description"))
                 published = clean(node.findtext("pubDate"))
+                source_node = node.find("source")
+                publisher = clean(source_node.text) if source_node is not None else ""
+                publisher_url = clean(source_node.get("url", "")) if source_node is not None else ""
                 if not title or not link:
+                    continue
+                try:
+                    published_dt = parsedate_to_datetime(published)
+                    if published_dt.tzinfo is None:
+                        published_dt = published_dt.replace(tzinfo=timezone.utc)
+                    if datetime.now(timezone.utc) - published_dt.astimezone(timezone.utc) > timedelta(days=MAX_AGE_DAYS):
+                        continue
+                except (TypeError, ValueError, OverflowError):
                     continue
                 key = hashlib.sha256((link.split("?")[0].rstrip("/") or title).lower().encode()).hexdigest()
                 if key in seen:
@@ -45,11 +59,15 @@ def run(output="public/data/seller_leads.json"):
                 seen.add(key)
                 host = urlparse(link).netloc.lower()
                 text = (title + " " + re.sub("<[^>]+>", " ", description)).lower()
-                if not any(term in text for term in ("property", "home", "house", "real estate", "foreclosure", "auction", "tax sale", "for sale")):
+                if not any(term in text for term in INTENT_TERMS):
+                    continue
+                if not any(term in text for term in ("property", "home", "house", "residential", "real estate", "foreclosure", "auction", "tax sale", "for sale")):
                     continue
                 items.append({
-                    "id": key, "label": label, "title": title, "url": link,
-                    "publisher": host, "published_at": published,
+                    "id": key, "label": label, "title": title,
+                    "url": publisher_url or link, "feed_url": link,
+                    "publisher": publisher or host, "publisher_url": publisher_url,
+                    "published_at": published,
                     "retrieved_at": datetime.now(timezone.utc).isoformat(),
                     "description": clean(re.sub("<[^>]+>", " ", description))[:1200],
                     "source_query": label, "verified": False
