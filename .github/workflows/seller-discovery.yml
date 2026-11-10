@@ -1,12 +1,15 @@
 name: Refresh public property discovery leads
 on:
+  push:
+    branches: [main]
+    paths:
+      - "aggregator/seller_discovery.py"
+      - ".github/workflows/seller-discovery.yml"
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
   group: seller-discovery
   cancel-in-progress: false
