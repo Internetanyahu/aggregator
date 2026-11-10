@@ -54,7 +54,7 @@ def fetch_sec_filings(tickers=None, limit=40):
         time.sleep(0.12)
     return records
 
-def fetch_campd_hourly(begin_date, end_date, state=None):
+def fetch_campd_hourly(begin_date, end_date):
     api_key = os.getenv("EPA_API_KEY", "").strip()
     if not api_key:
         raise RuntimeError("EPA CAMPD requires a free api.data.gov API key. Set EPA_API_KEY; no key is bundled.")
@@ -62,9 +62,8 @@ def fetch_campd_hourly(begin_date, end_date, state=None):
     start, end = date.fromisoformat(begin_date), date.fromisoformat(end_date)
     if end < start or (end-start).days > 31:
         raise ValueError("CAMPD hourly query must cover 0–31 days.")
-    params = {"api_key":api_key,"beginDate":begin_date,"endDate":end_date}
-    if state:
-        params["state"] = state
+    params = {"api_key":api_key,"beginDate":begin_date,"endDate":end_date,
+              "programCodeInfo":os.getenv("EPA_PROGRAM_CODE_INFO","CSNOX|CSOSG2|CSOSG3")}
     r = session("NorthstarResearch/1.0 contact: configured-in-environment").get(CAMPD_HOURLY, params=params, timeout=TIMEOUT)
     r.raise_for_status()
     data = r.json()
@@ -123,6 +122,6 @@ def fetch_illinois_warn(months=3):
             if not item: continue
             stable="|".join([item.get(k,"") for k in headers[:5]]) or str(rownum)
             records.append({"source":"illinois_warn","source_id":report_url+"#"+str(rownum)+":"+stable,
-                "published_at":None,"retrieved_at":now(),"source_url":report_url,"payload":item})
+                "published_at":next((v for k,v in item.items() if "warn received" in k.lower()),None),"retrieved_at":now(),"source_url":report_url,"payload":item})
         wb.close()
     return records
