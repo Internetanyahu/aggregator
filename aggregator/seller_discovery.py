@@ -59,7 +59,7 @@ PROPERTY = ("property", "home", "house", "residential", "real estate", "parcel",
 
 
 def clean(value: str | None) -> str:
-    return re.sub(r"\\s+", " ", value or "").strip()
+    return re.sub(r"\s+", " ", value or "").strip()
 
 
 def parse_feed(label: str, query: str) -> tuple[list[dict], dict | None]:
