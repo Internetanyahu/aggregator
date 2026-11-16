@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-16T06:29:16.160827+00:00",
+  "generated_at": "2026-11-16T22:02:06.674460+00:00",
   "method": "Google News RSS indexing of public reporting and indexed public notices; no restricted-site scraping",
-  "count": 19,
+  "count": 13,
   "query_count": 39,
   "areas": [
     "\"Lake County\" Illinois",
@@ -53,7 +53,40 @@
     "Public FSBO listings",
     "Public real estate price reductions"
   ],
-  "errors": [],
+  "errors": [
+    {
+      "feed": "\"Lake County\" Illinois · Auction / REO",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22Lake+County%22+Illinois+%28real+estate+auction+OR+REO+OR+%22bank+owned%22+OR+%22foreclosed+home%22%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"Kane County\" Illinois · Tax sale / tax deed",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22Kane+County%22+Illinois+%28%22tax+sale%22+OR+%22tax+deed%22+OR+%22delinquent+property+tax%22%29+%28house+OR+home+OR+parcel%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"Kane County\" Illinois · FSBO / owner-listed",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22Kane+County%22+Illinois+%28%22for+sale+by+owner%22+OR+FSBO+OR+%22owner+listed%22%29+%28house+OR+home+OR+property%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"Cook County\" Illinois · Foreclosure / sheriff sale",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22Cook+County%22+Illinois+%28foreclosure+OR+%22sheriff+sale%22+OR+%22judicial+sale%22%29+%28house+OR+home+OR+property%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"DuPage County\" Illinois · FSBO / owner-listed",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22DuPage+County%22+Illinois+%28%22for+sale+by+owner%22+OR+FSBO+OR+%22owner+listed%22%29+%28house+OR+home+OR+property%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"DuPage County\" Illinois · Tax sale / tax deed",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22DuPage+County%22+Illinois+%28%22tax+sale%22+OR+%22tax+deed%22+OR+%22delinquent+property+tax%22%29+%28house+OR+home+OR+parcel%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "\"DuPage County\" Illinois · Foreclosure / sheriff sale",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22DuPage+County%22+Illinois+%28foreclosure+OR+%22sheriff+sale%22+OR+%22judicial+sale%22%29+%28house+OR+home+OR+property%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "feed": "Freddie Mac HomeSteps",
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Ahomesteps.com+Illinois+property&hl=en-US&gl=US&ceid=US:en"
+    }
+  ],
   "items": [
     {
       "title": "More Than 2,400 Acres of Illinois Farmland Head to Auction in February 2026 - Successful Farming",
@@ -64,20 +97,7 @@
       "description": "More Than 2,400 Acres of Illinois Farmland Head to Auction in February 2026 &nbsp;&nbsp; Successful Farming",
       "source_query": "\"Will County\" Illinois · Auction / REO | \"Northern Illinois\" · Auction / REO",
       "id": "63bfadfd432acc50a66a1f9ca4560195e230ea47dc9d58f799cb9863efeae165",
-      "retrieved_at": "2026-11-16T06:29:15.384826+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "A couple lost their home in a Cook County tax sale. A new law could change the system - NBC 5 Chicago",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeEpNN1BGMmxBZjFTdXRQUWNjd0w1NDVGNWZFVlBTSVRmbzJONHdHNVd1OFpSa0VBWUhmaWRPd0FfeTN6RTVLWndwa1diRkRpcTRvX0NBLXlzM3ZkdnZUSVQtOGpPaGJFREd5Zk9ZUWNLMjRIbV9WRlVZRFMtVlVMY0MwbVhxbUNDUEROam5aRnZpUi1vSjFGbWFxTlhrVjV4VUF1SzFXaFlkZ213bWhpWGpfTWFVUzTSAb8BQVVfeXFMTW14Z1hsQ0dScndHdTRIVVRMRDlxN2c4UFJ5ek5wSi1KNWtfWHBWYU9IcHBNMVZjMTdsU0NNT3pWdERjVXVIbjZ3WUw3TUFaTGh1TkZBclphLUlGcVhMSFZLZDhnT09lYXpKZ3dtSVBwbjF4enQxVHlvTmtkWmFtdXAtUEx0cFdkdDQ3NDBvUHZpSVRnYnRSRWc4TU5QMHMzWk9VcUlsS2dtMl8zSUJvMHM3MFpsdkZvU3drMENyQms?oc=5",
-      "publisher": "NBC 5 Chicago",
-      "publisher_url": "https://www.nbcchicago.com",
-      "published_at": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "description": "A couple lost their home in a Cook County tax sale. A new law could change the system &nbsp;&nbsp; NBC 5 Chicago",
-      "source_query": "\"DuPage County\" Illinois · Tax sale / tax deed",
-      "id": "4173dd9bd104a30b34a6afdb592b6cee7a4d5ceb3e9fc425a20020f25df53e68",
-      "retrieved_at": "2026-11-16T06:29:15.382583+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.852552+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -90,33 +110,20 @@
       "description": "VA Help To Avoid Foreclosure &nbsp;&nbsp; VA.gov Home | Veterans Affairs",
       "source_query": "VA acquired properties",
       "id": "5c8e5617318b7095f76ac9336dfa2459d30ed27a8496dab30c530bc746bac711",
-      "retrieved_at": "2026-11-16T06:29:16.065162+00:00",
+      "retrieved_at": "2026-11-16T22:02:06.442910+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
     {
-      "title": "Property tax foreclosures illegally stripped Cook County homeowners of their equity, federal judge rules - Chicago Sun-Times",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTBhT2hIT2JPOWpuUVpza2ROTmQzVldObExfWVdzNThvckVqbnhmYlo5TlhwWGZaZ3NkdWdDOHA3RENPaTQ5d3dqV3hrV3RFRnAxTGNUc1hTYlR1aGxHRm5TU3E5TlVneWt3YWxYOEtxYmxKLWRZdzJGbVJ0SDY2am8ybUpsY0p6SEo1cTJhaUZTSHE1TTgxRExhQXhVLUxxRldkWFBsYzBZeHFFTjdmQklmejk2ZldMbXlVMFFfTlVNanc1TWRkQVFB?oc=5",
-      "publisher": "Chicago Sun-Times",
-      "publisher_url": "https://chicago.suntimes.com",
-      "published_at": "Wed, 10 Dec 2025 08:00:00 GMT",
-      "description": "Property tax foreclosures illegally stripped Cook County homeowners of their equity, federal judge rules &nbsp;&nbsp; Chicago Sun-Times",
-      "source_query": "\"Cook County\" Illinois · Foreclosure / sheriff sale",
-      "id": "c0510bbb1a0d5dd6e607764374ed550dd454b7184b0222a0b84d705f3582d5c8",
-      "retrieved_at": "2026-11-16T06:29:15.067339+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "Commercial landlords avoid penalties amid Cook County’s twice-delayed property tax sale - Crain's Chicago Business",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaC05MGhXZ19GZXlBRThDOVJZUVpKaDkzSk03UE9pS2gwRzllV2xCZTRFSUphdkNYZFpZVVFXZDR4VEIzN0tIOEgxbERubzFBMjdVakREUnpIbHM0UTExSUVteVlWX3NfZ3NKUWdDTFlsYUdJWjh3QXRVSk1QMjZNQmpiOXNJMWRpdFdQcEU1QTRIbE15UWdvekxIdXpvN250WW5CS3o4U08?oc=5",
-      "publisher": "Crain's Chicago Business",
-      "publisher_url": "https://www.chicagobusiness.com",
-      "published_at": "Tue, 24 Mar 2026 07:00:00 GMT",
-      "description": "Commercial landlords avoid penalties amid Cook County’s twice-delayed property tax sale &nbsp;&nbsp; Crain's Chicago Business",
-      "source_query": "\"Cook County\" Illinois · Foreclosure / sheriff sale",
-      "id": "9832693b40c05879efdb0c3605984829d6553394269925b0a982c92028b4a341",
-      "retrieved_at": "2026-11-16T06:29:15.067326+00:00",
+      "title": "City Sues For Millions In Damages After ‘Worst Landowner’ Property Auction Fails - Block Club Chicago",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcGFacWNLc1pXM3h0NzUxR0k3OEtQa0dhaThRZUg1RUVVVUNBQl9ZQ3B4NXZGTUluU25BR3o0ZWNaZzJzbkpkUlNGWkpTcjRKSDNERDVIUkltUUQ5dUpoU2RDNkRLOENSOUdsTl9CYXY0LXc4MXdzVDROVXhYZmg1XzFtMzI4UzgwVWcwRzY0RTgySVhFaGpiOVRaaWNmRHByQzAwUVV6dm56NnplWnBLVk1KSTdzbWsyaWYw?oc=5",
+      "publisher": "Block Club Chicago",
+      "publisher_url": "https://blockclubchicago.org",
+      "published_at": "Wed, 04 Feb 2026 08:00:00 GMT",
+      "description": "City Sues For Millions In Damages After ‘Worst Landowner’ Property Auction Fails &nbsp;&nbsp; Block Club Chicago",
+      "source_query": "\"Cook County\" Illinois · Auction / REO",
+      "id": "3d0eab2671c0bc0202789d3930318bd60ee417d88d3231c259abed33e170eef9",
+      "retrieved_at": "2026-11-16T22:02:05.340000+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -127,9 +134,9 @@
       "publisher_url": "https://www.chicagobusiness.com",
       "published_at": "Tue, 24 Mar 2026 07:00:00 GMT",
       "description": "Suburban counties lose bid to blame Illinois for unconstitutional property tax sales &nbsp;&nbsp; Crain's Chicago Business",
-      "source_query": "\"DuPage County\" Illinois · Auction / REO | \"DuPage County\" Illinois · Tax sale / tax deed | \"Northern Illinois\" · Tax sale / tax deed",
+      "source_query": "\"DuPage County\" Illinois · Auction / REO | \"Northern Illinois\" · Tax sale / tax deed",
       "id": "54655cb9d81bd29f7cfaebd30e8665b8f9a626c95b6411833ab90410ca7d8ade",
-      "retrieved_at": "2026-11-16T06:29:15.320090+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.578711+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -140,9 +147,9 @@
       "publisher_url": "https://nationalmortgageprofessional.com",
       "published_at": "Tue, 14 Jul 2026 07:00:00 GMT",
       "description": "Illinois Changes Property Tax Foreclosure Process To Return Surplus Equity &nbsp;&nbsp; National Mortgage Professional",
-      "source_query": "\"Cook County\" Illinois · Foreclosure / sheriff sale | \"Cook County\" Illinois · Auction / REO",
+      "source_query": "\"Cook County\" Illinois · FSBO / owner-listed | \"Cook County\" Illinois · Auction / REO",
       "id": "ea674906d898adfff0dcf04cde8c00f453f5a826f8fe15a790fc69d469380dff",
-      "retrieved_at": "2026-11-16T06:29:15.067289+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.157345+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -155,7 +162,7 @@
       "description": "As Illinois revamps property tax sales, questions over repaying homeowners loom &nbsp;&nbsp; Crain's Chicago Business",
       "source_query": "\"Cook County\" Illinois · Auction / REO",
       "id": "9039f53660654d558e71ad3ca49a72f343f63e4b8136b25d65c1fd0b9eaeb4f3",
-      "retrieved_at": "2026-11-16T06:29:15.092894+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.340007+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -168,33 +175,7 @@
       "description": "Cook County liable for property tax sale violations, judge rules &nbsp;&nbsp; WBEZ Chicago",
       "source_query": "\"Cook County\" Illinois · Tax sale / tax deed | \"Cook County\" Illinois · Auction / REO",
       "id": "a6856fcc81c65454d3fcc38730845deb760b7a3ec842c41005bf6712fd6a5a74",
-      "retrieved_at": "2026-11-16T06:29:15.054189+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "Cook County property ‘tax sale’ system unconstitutional - www.cities929.com",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdElNQlBzMkdFSnBLLTBqVEh0ZTdVMUI0ZFBiTWVYUXlkNnhhUWN3ZTVDcDBEVi1uMmdyLWlYSzc3Q3dfV0Yxampsb2ZGcUNwd0daaU5MLTYwOG9NMUY3TnNSaUxtb24xN3k2QUFZZ0FqN1VlMEhPcGdSQVNKWTEzbVVXS2tMRG1GZXo2MzQxT3ViRVFXblE?oc=5",
-      "publisher": "www.cities929.com",
-      "publisher_url": "https://www.cities929.com",
-      "published_at": "Tue, 09 Dec 2025 08:00:00 GMT",
-      "description": "Cook County property ‘tax sale’ system unconstitutional &nbsp;&nbsp; www.cities929.com",
-      "source_query": "\"Lake County\" Illinois · Tax sale / tax deed | \"DuPage County\" Illinois · Tax sale / tax deed",
-      "id": "d5f6447800ea94dd899431549677da117102138f7264cf0f0dcbea9ec466c387",
-      "retrieved_at": "2026-11-16T06:29:14.533035+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "Plans are underway to end Cook County’s property tax sales - WBEZ",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNMTlwQzRVR2NnczhGSFVvUnNRUUdjS3Awc0JrUVN4S0tRTHNjWUtxU3BObzUwOUNVNExmTDdCWlhYNXZfNDFUejQ5T05ydnNvY0FSN3BxS0xrUnBaeVhHRUJBdDZNcFUtZVFEY0U3UXREUGUyTHZBZnlNVm02QlBoNGkzOGROazlpdnZUQU12OWR2ZTRwYk1IejU2RWdfV0w4ZFBJWFg2X1p1cTl5dWszOHBKUVhqQklQOXRER2RhM0VSVU5GR1kxMnpCS3VOeldodWltMmFR?oc=5",
-      "publisher": "WBEZ",
-      "publisher_url": "https://www.wbez.org",
-      "published_at": "Thu, 12 Feb 2026 08:00:00 GMT",
-      "description": "Plans are underway to end Cook County’s property tax sales &nbsp;&nbsp; WBEZ",
-      "source_query": "\"Cook County\" Illinois · Foreclosure / sheriff sale",
-      "id": "cb2349347f29077d33eab63ab93beddb01cb3509e19ba08411b19662e203c562",
-      "retrieved_at": "2026-11-16T06:29:15.067312+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.281405+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -207,7 +188,7 @@
       "description": "Plans are underway to end Cook County’s property tax sales &nbsp;&nbsp; Chicago Sun-Times",
       "source_query": "\"Cook County\" Illinois · Auction / REO",
       "id": "23646d5748a9f86ec1df881b87edb276e7c52af2d383ee434206991ca248a9b6",
-      "retrieved_at": "2026-11-16T06:29:15.092879+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.339981+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -220,20 +201,7 @@
       "description": "Cook County races clock on property tax sales, potentially creating legal liability &nbsp;&nbsp; The Real Deal",
       "source_query": "\"Cook County\" Illinois · Auction / REO",
       "id": "eba5633b245eee0a3070fac181937cccf1544c4d5976220536c73572fca6af98",
-      "retrieved_at": "2026-11-16T06:29:15.092902+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "Home Foreclosures Spike In CA — See Where It's Happening The Most - Patch",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOR2oxZEhhVU5uYzRvRHB2X2ItYVBRamNBYmtxeE54eW9ERE52NnpnclNGZnBPcFpySWpkYTNhUXF6eGlCRE5QM3RfdFZ4alBmTWt5RzkxN1hGY0Y3SlhJQW1mUlZJdjROZW0xbzNXeno0LTEtTE96aUEwS0o5QVNsN3RFeXByZ0l2R0VfV3ZabENMWVR0VXJHelFR?oc=5",
-      "publisher": "Patch",
-      "publisher_url": "https://patch.com",
-      "published_at": "Sat, 25 Jul 2026 07:00:00 GMT",
-      "description": "Home Foreclosures Spike In CA — See Where It's Happening The Most &nbsp;&nbsp; Patch",
-      "source_query": "\"Lake County\" Illinois · Foreclosure / sheriff sale",
-      "id": "2b84be5a9d5b67a376b2efaf4ee98b5e9813be18a2d37fe8d9297c8b909d3fd2",
-      "retrieved_at": "2026-11-16T06:29:14.540362+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.340011+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -244,9 +212,9 @@
       "publisher_url": "https://suburbanchicagoland.com",
       "published_at": "Sat, 07 Nov 2026 14:16:48 GMT",
       "description": "Treasurer Pappas Announces the Fewest Number of Cook County Homes and other Properties Eligible for Tax Sale in Decades &nbsp;&nbsp; Suburban Chicagoland",
-      "source_query": "\"Kane County\" Illinois · Tax sale / tax deed | \"Will County\" Illinois · Tax sale / tax deed",
+      "source_query": "\"Will County\" Illinois · Tax sale / tax deed",
       "id": "242c11d2f08102cf6cfa43e0a54419a89a9c224648f3c76988ef76ea4b85660b",
-      "retrieved_at": "2026-11-16T06:29:14.799099+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.774243+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -259,20 +227,7 @@
       "description": "One Illinois county charts its own path on property tax sales &nbsp;&nbsp; Crain's Chicago Business",
       "source_query": "\"Northern Illinois\" · Tax sale / tax deed",
       "id": "453e31a8247082bcdb572037ac294ea14c82b46efea670c18eacf405030b29f7",
-      "retrieved_at": "2026-11-16T06:29:15.586786+00:00",
-      "verified": false,
-      "record_type": "public_search_reference"
-    },
-    {
-      "title": "Illinois county updates property tax sale rules after court warnings - Illinois Policy Institute",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWGlGTUlwX01oOVc0UGEtWDJmWmtNblVTWjdESWtZbVB5SlJIQWtBYjdVWmtQQ0d1WVM3d2lEYklGN0ZSMkZVZXNYSmxnU0RKZk1pNXFjc2xXOXRULWJHbkhFeTkxcEFjUEVpcmlQMW56ZlZoOEttOWEtcFRTRnZWUlZ0bmY3R2R4aVpERzJIUGFkT2FJejB4TXdwdjZyMWFpaGc?oc=5",
-      "publisher": "Illinois Policy Institute",
-      "publisher_url": "https://www.illinoispolicy.org",
-      "published_at": "Mon, 12 Jan 2026 08:00:00 GMT",
-      "description": "Illinois county updates property tax sale rules after court warnings &nbsp;&nbsp; Illinois Policy Institute",
-      "source_query": "\"Cook County\" Illinois · Foreclosure / sheriff sale",
-      "id": "744a06b820158c8b9a881db407a197fdb23b9048145d32c5e41baa465b726cde",
-      "retrieved_at": "2026-11-16T06:29:15.067332+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.957883+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -285,7 +240,7 @@
       "description": "Northern Illinois Land Bank to auction seven properties &nbsp;&nbsp; Freeport Journal-Standard",
       "source_query": "\"Northern Illinois\" · Auction / REO",
       "id": "67d4312a93a14373deec98f656260fb79786a83ca32b403b25640b4178b3a119",
-      "retrieved_at": "2026-11-16T06:29:15.632090+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.983145+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     },
@@ -296,9 +251,9 @@
       "publisher_url": "https://www.injusticewatch.org",
       "published_at": "Fri, 05 Jun 2026 07:00:00 GMT",
       "description": "Illinois tax sales get an overhaul, but how much will homeowners benefit? &nbsp;&nbsp; Injustice Watch",
-      "source_query": "\"Cook County\" Illinois · Tax sale / tax deed | \"Cook County\" Illinois · Foreclosure / sheriff sale | \"Cook County\" Illinois · Auction / REO",
+      "source_query": "\"Cook County\" Illinois · Tax sale / tax deed | \"Cook County\" Illinois · Auction / REO",
       "id": "5842c61399fb72758fd8628a2adb2b9fe0328e628f955c48375c68a1fb4ee69b",
-      "retrieved_at": "2026-11-16T06:29:15.054171+00:00",
+      "retrieved_at": "2026-11-16T22:02:05.281385+00:00",
       "verified": false,
       "record_type": "public_search_reference"
     }
